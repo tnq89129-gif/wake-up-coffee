@@ -1,0 +1,226 @@
+/* ==========================================================================
+   WAKE UP COFFEE - TOTAL STYLING SHEET
+   ========================================================================== */
+
+/* Tùy chỉnh màu sắc & Fonts chủ đạo giống bản thiết kế */
+:root {
+    --coffee-primary: #8C5638; /* Màu nâu chủ đạo */
+    --coffee-dark: #1E1611;    /* Màu đen/nâu tối của Footer */
+    --coffee-light: #F4EBE1;   /* Màu xám/kem nhạt nền truyện */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Kiểu căn đều văn bản cho các đoạn mô tả dài */
+.text-justify {
+    text-align: justify;
+}
+
+/* 1. Hero Section */
+.hero-section {
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-content {
+    height: calc(75vh - 80px);
+}
+
+.tracking-wide {
+    letter-spacing: 4px;
+}
+
+.tracking-widest {
+    letter-spacing: 8px;
+}
+
+.search-bar .form-control {
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+.search-bar .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 2. Badge & Buttons (Đã gom nhóm và tối ưu) */
+.badge-custom {
+    display: inline-block !important;
+    background-color: var(--coffee-primary) !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 50px !important; /* Bo tròn dài theo mẫu */
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    width: 100% !important;
+    max-width: 250px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-coffee {
+    background-color: var(--coffee-primary) !important;
+    color: white !important;
+    border-radius: 20px !important;
+    padding: 6px 25px !important;
+    font-size: 0.9rem !important;
+}
+.btn-coffee:hover {
+    background-color: #6d4028 !important;
+    color: white !important;
+}
+
+/* 3. Tiêu đề các mục */
+.section-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 5px;
+    color: #222;
+}
+
+/* 4. Story Section */
+.bg-story {
+    background-color: #EAEAEA;
+}
+.max-w-700 {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.small-text-p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* 5. Khung ảnh Nổi bật cố định tỉ lệ */
+.img-thumb-fixed {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* 6. Footer Section */
+.footer-section {
+    background-color: var(--coffee-dark) !important;
+}
+.footer-section a:hover {
+    color: #fff !important;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR STYLING (Thanh menu tối mờ sáng/tối chữ)
+   ========================================================================== */
+
+/* Khung nền chứa menu */
+.navbar.custom-navbar {
+    background-color: rgba(24, 24, 24, 0.92) !important; /* Nền tối mờ đè Bootstrap */
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Các chữ menu ở trạng thái bình thường (Hơi mờ mờ) */
+.custom-navbar .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.55) !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.25s ease-in-out !important;
+}
+
+/* Khi di chuột qua chữ sẽ sáng nhẹ lên */
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* TRANG HIỆN TẠI (Active) - Sáng rõ hoàn toàn 100% màu trắng và đậm chữ */
+.custom-navbar .navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Ô tìm kiếm bo tròn góc phải thanh điều hướng */
+.search-box-custom {
+    border-radius: 20px !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: #ffffff !important;
+    padding-left: 15px !important;
+    font-size: 0.85rem !important;
+}
+.search-box-custom::placeholder {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+.search-btn-custom {
+    border-radius: 20px !important;
+    border: none !important;
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-left: -35px;
+    z-index: 4;
+}
+.search-btn-custom:hover {
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   CSS BỔ SUNG CHO CÁC TRANG CON DÙNG CHUNG
+   ========================================================================== */
+
+/* --- 1. TRANG MENU (MENU.HTML) --- */
+.body-menu-page {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}   
+
+.menu-list-group li {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+    margin-bottom: 12px;
+}
+
+.img-menu-thumb {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #d4a373 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* --- 2. TRANG ĐẶT BÀN & LIÊN HỆ (datban_lienhe.html) --- */
+.text-coffee-title {
+    color: #8b5a2b !important;
+}
+
+.form-booking .form-control, 
+.form-booking .form-select {
+    border: 1px solid #ced4da !important;
+    border-radius: 4px !important;
+    padding: 12px 15px !important;
+    font-size: 0.95rem !important;
+}
+
+.form-booking .form-control:focus, 
+.form-booking .form-select:focus {
+    border-color: #8b5a2b !important;
+    box-shadow: 0 0 0 0.2rem rgba(139, 90, 43, 0.25) !important;
+}
+
+.btn-booking-submit {
+    background-color: #8b5a2b !important;
+    color: #fff !important;
+    padding: 12px 45px !important;
+    font-weight: bold !important;
+    border: none !important;
+    transition: background-color 0.3s ease !important;
+}
+.btn-booking-submit:hover {
+    background-color: #704720 !important;
+}
